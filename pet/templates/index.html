@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ペット</title>
+</head>
+<body>
+  <h3>
+    動物
+  </h3>
+  <table border="3">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>オーナーID</th>
+        <th>ペット名</th>
+        <th>種類</th>
+        <th>オーナー名</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for pet in pets %}
+        <tr>
+          <td>{{ pet.id }}</td>
+          <td>{{ pet.owner.id }}</td>
+          <td>{{ pet.name }}</td>
+          <td>{{ pet.kind }}</td>
+          <td>{{ pet.owner.name}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
